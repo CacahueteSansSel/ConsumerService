@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iPi",
+        "gCg",
+        "iRi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "P": {
+            "item": "minecraft:piston"
+        },
+        "g": {
+            "item": "consume:plastic_plate"
+        },
+        "C": {
+            "item": "minecraft:chest"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        }
+    },
+    "result": {
+        "item": "consume:packager",
+        "count": 1
+    }
+}

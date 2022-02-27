@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "consume:petroleum_crystal"
+  },
+  "result": "consume:molten_petroleum",
+  "experience": 0.35,
+  "cookingtime": 200
+}

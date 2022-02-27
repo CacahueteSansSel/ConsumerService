@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "consume:block/atm",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "consume:block/atm"
+    },
+    "facing=south": {
+      "model": "consume:block/atm",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "consume:block/atm",
+      "y": 270
+    }
+  }
+}

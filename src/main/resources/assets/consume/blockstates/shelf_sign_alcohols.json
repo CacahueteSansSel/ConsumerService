@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "consume:block/shelf_sign_alcohols",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "consume:block/shelf_sign_alcohols"
+    },
+    "facing=south": {
+      "model": "consume:block/shelf_sign_alcohols",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "consume:block/shelf_sign_alcohols",
+      "y": 270
+    }
+  }
+}

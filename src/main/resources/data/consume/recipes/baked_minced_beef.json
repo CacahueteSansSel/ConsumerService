@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "consume:frozen_minced_beef"
+  },
+  "result": "consume:baked_minced_beef",
+  "experience": 0.35,
+  "cookingtime": 250
+}

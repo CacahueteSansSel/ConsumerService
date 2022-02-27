@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PRP",
+    "FAF",
+    "STS"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:warning_sign_block"
+    },
+    "R": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "F": {
+      "item": "minecraft:iron_nugget"
+    },
+    "A": {
+      "item": "consume:antenna"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "item": "minecraft:stone_pressure_plate"
+    }
+  },
+  "result": {
+    "item": "consume:detector_pressure_plate",
+    "count": 1
+  }
+}

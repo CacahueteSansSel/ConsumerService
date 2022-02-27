@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "F",
+    "F",
+    "P"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic"
+    },
+    "F": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "consume:swiss_knife",
+    "count": 1
+  }
+}

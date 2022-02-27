@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FG ",
+    "FG ",
+    "FGS"
+  ],
+  "key": {
+    "S": {
+      "item": "consume:protective_coat_spray"
+    },
+    "F": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "result": {
+    "item": "consume:protective_entrance_door",
+    "count": 1
+  }
+}

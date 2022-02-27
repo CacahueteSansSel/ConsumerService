@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "consume:bowl_water",
+      "data": 0
+    },
+    {
+      "item": "consume:spaghett",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "consume:bowl_spaghett",
+    "count": 1
+  }
+}
