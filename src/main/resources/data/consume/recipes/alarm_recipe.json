@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "PSP",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "S": {
+      "item": "minecraft:note_block"
+    }
+  },
+  "result": {
+    "item": "consume:alarm",
+    "count": 1
+  }
+}

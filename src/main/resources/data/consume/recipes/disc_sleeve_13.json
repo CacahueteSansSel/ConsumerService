@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "consume:disc_sleeve_empty",
+      "data": 0
+    },
+    {
+      "item": "minecraft:music_disc_13",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "consume:disc_sleeve_13",
+    "count": 1
+  }
+}

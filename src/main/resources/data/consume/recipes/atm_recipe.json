@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "PCP",
+    "BBB"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "S": {
+      "item": "consume:screen"
+    },
+    "C": {
+      "item": "consume:credit_chip"
+    },
+    "B": {
+      "item": "minecraft:stone_button"
+    }
+  },
+  "result": {
+    "item": "consume:atm",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "PSP",
+    " PR"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "S": {
+      "item": "minecraft:stone_bricks"
+    },
+    "R": {
+      "item": "consume:protective_coat_spray"
+    }
+  },
+  "result": {
+    "item": "consume:protective_block",
+    "count": 1
+  }
+}

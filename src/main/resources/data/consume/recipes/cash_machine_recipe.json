@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "SCE",
+    "FFF"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "S": {
+      "item": "consume:screen"
+    },
+    "C": {
+      "item": "minecraft:chest"
+    },
+    "E": {
+      "item": "consume:credit_chip"
+    },
+    "F": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "consume:cash_machine",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "consume:block/protective_ceiling_gray"
+  }
+}

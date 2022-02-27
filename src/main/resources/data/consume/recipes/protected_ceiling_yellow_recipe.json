@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    "PSP",
+    " PR"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "S": {
+      "item": "minecraft:yellow_concrete"
+    },
+    "R": {
+      "item": "consume:protective_coat_spray"
+    }
+  },
+  "result": {
+    "item": "consume:protective_ceiling_yellow",
+    "count": 1
+  }
+}

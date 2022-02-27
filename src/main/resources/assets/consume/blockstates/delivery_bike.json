@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "consume:block/delivery_bike",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "consume:block/delivery_bike"
+    },
+    "facing=south": {
+      "model": "consume:block/delivery_bike",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "consume:block/delivery_bike",
+      "y": 270
+    }
+  }
+}

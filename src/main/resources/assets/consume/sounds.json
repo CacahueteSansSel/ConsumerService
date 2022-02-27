@@ -1,0 +1,22 @@
+{
+  "alarm_beep": {
+    "sounds": [
+      "consume:alarm_beep"
+    ]
+  },
+  "atm.login.success": {
+    "sounds": [
+      "consume:atm/login_success"
+    ]
+  },
+  "atm.login.failed": {
+    "sounds": [
+      "consume:atm/login_failed"
+    ]
+  },
+  "atm.logoff.success": {
+    "sounds": [
+      "consume:atm/logoff_success"
+    ]
+  }
+}

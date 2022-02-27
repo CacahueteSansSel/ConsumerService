@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "consume:coffee_cup_empty",
+      "data": 0
+    },
+    {
+      "item": "consume:coffee",
+      "data": 0
+    },
+    {
+      "item": "minecraft:potion",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "consume:coffee_cup_filled",
+    "count": 1
+  }
+}

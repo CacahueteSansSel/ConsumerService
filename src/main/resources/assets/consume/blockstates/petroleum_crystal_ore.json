@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "consume:block/petroleum_crystal_ore" }
+  }
+}

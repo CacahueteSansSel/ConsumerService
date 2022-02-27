@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PSP",
+    "PPR"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic"
+    },
+    "S": {
+      "item": "minecraft:glass"
+    },
+    "R": {
+      "item": "consume:protective_coat_spray"
+    }
+  },
+  "result": {
+    "item": "consume:protective_glass",
+    "count": 1
+  }
+}

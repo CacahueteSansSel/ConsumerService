@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=true": { "model": "consume:block/detector_pressure_plate_on" },
+    "powered=false": { "model": "consume:block/detector_pressure_plate_off" }
+  }
+}

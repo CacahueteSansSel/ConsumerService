@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PGP",
+    "GER",
+    "PRP"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    },
+    "E": {
+      "item": "minecraft:ender_pearl"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "consume:credit_chip",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DPD",
+    "PCP",
+    "LHL"
+  ],
+  "key": {
+    "P": {
+      "item": "consume:plastic_plate"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "H": {
+      "item": "minecraft:chest"
+    },
+    "C": {
+      "item": "consume:credit_chip"
+    }
+  },
+  "result": {
+    "item": "consume:blockchain_block",
+    "count": 1
+  }
+}
