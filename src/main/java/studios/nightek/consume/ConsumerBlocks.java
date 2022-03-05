@@ -30,7 +30,7 @@ public class ConsumerBlocks {
     public static final ProtectiveShelfBlock PROTECTIVE_SHOP_SHELF_START = new ProtectiveShelfBlock("shop_shelf_start");
     public static final ProtectiveShelfBlock PROTECTIVE_SHOP_SHELF_MIDDLE = new ProtectiveShelfBlock("shop_shelf_middle");
     public static final ProtectiveShelfBlock PROTECTIVE_SHOP_SHELF_END = new ProtectiveShelfBlock("shop_shelf_end");
-    public static final ProtectiveShelfBlock PROTECTIVE_SHOWCASE = new ProtectiveShelfBlock("protective_showcase");
+    public static final ProtectiveGlassShowcase PROTECTIVE_SHOWCASE = new ProtectiveGlassShowcase();
     public static final DetectorPressurePlate PROTECTIVE_DETECTOR_PRESSURE_PLATE = new DetectorPressurePlate(AbstractBlock.Properties.create(Material.IRON));
     public static final AlarmBlock PROTECTIVE_ALARM_BLOCK = new AlarmBlock();
     public static final ProtectiveCashMachineBlock PROTECTIVE_CASH_MACHINE_BLOCK = new ProtectiveCashMachineBlock();

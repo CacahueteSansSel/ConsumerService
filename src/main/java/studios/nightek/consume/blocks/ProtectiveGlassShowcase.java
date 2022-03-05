@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 
 public class ProtectiveGlassShowcase extends ContainerBlock {
     public ProtectiveGlassShowcase() {
-        super(Properties.create(Material.GLASS).hardnessAndResistance(-1f, 3600000.0f)
+        super(Properties.create(Material.GLASS).notSolid().hardnessAndResistance(-1f, 3600000.0f)
                 .sound(SoundType.GLASS));
         setRegistryName("protective_showcase");
     }

@@ -7,7 +7,7 @@ import studios.nightek.consume.entities.BankAccountControllerBlockTileEntity;
 public class ConsumerTileEntities {
     public static final TileEntityType<?> PROTECTIVE_SHELF_TILE_ENTITY = TileEntityType.Builder.create(studios.nightek.consume.entities.ProtectiveShelfTileEntity::new,
             ConsumerBlocks.PROTECTIVE_SHOP_SHELF_START, ConsumerBlocks.PROTECTIVE_SHOP_SHELF_MIDDLE,
-            ConsumerBlocks.PROTECTIVE_SHOP_SHELF_END).build(null).setRegistryName("shop_shelf_te");
+            ConsumerBlocks.PROTECTIVE_SHOP_SHELF_END, ConsumerBlocks.PROTECTIVE_SHOWCASE).build(null).setRegistryName("shop_shelf_te");
     public static final TileEntityType<?> CASH_MACHINE_TILE_ENTITY = TileEntityType.Builder.create(studios.nightek.consume.entities.CashMachineTileEntity::new,
             ConsumerBlocks.PROTECTIVE_CASH_MACHINE_BLOCK).build(null).setRegistryName("cash_machine_te");
     public static final TileEntityType<?> BLOCKCHAIN_TILE_ENTITY = TileEntityType.Builder.create(BankAccountControllerBlockTileEntity::new,
