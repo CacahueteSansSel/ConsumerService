@@ -130,7 +130,7 @@ public class Account {
 
     public Account read(CompoundNBT nbt) {
         amount = nbt.getFloat("amount");
-        id = nbt.getString("id");
+        id = nbt.getString("id").trim();
         long savedHash = nbt.getLong("hash");
         passcodeHash = nbt.getLong("passcode_hash");
         if (nbt.contains("name")) name = nbt.getString("name");

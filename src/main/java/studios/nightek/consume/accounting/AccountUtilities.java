@@ -31,7 +31,7 @@ public class AccountUtilities {
             finalId += " ";
         }
 
-        return finalId;
+        return finalId.trim();
     }
 
     public static String generateTransactionId() {
