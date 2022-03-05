@@ -1,10 +1,52 @@
 package studios.nightek.consume.marketing;
 
+import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 
 public class MarketingUtilities {
+    public static int getCurrencyCountForInventory(IInventory inventory) {
+        int count = 0;
+
+        for (int i = 0; i < inventory.getSizeInventory(); i++) {
+            ItemStack item = inventory.getStackInSlot(i);
+            if (item.getItem() != Items.EMERALD) continue;
+
+            count += item.getCount();
+        }
+
+        return count;
+    }
+
+    public static boolean consumeCurrency(IInventory inventory, int amount) {
+        if (getCurrencyCountForInventory(inventory) < amount) return false;
+
+        int amountBase = amount;
+
+        for (int stack = 0; stack < inventory.getSizeInventory(); stack++) {
+            if (amountBase <= 0) break;
+
+            ItemStack item = inventory.getStackInSlot(stack);
+            if (item.getItem() != Items.EMERALD) continue;
+
+            int amountToRemove = amountBase > 64 ? 64 : amountBase;
+            if (amountToRemove == 0) break;
+            item.shrink(amountToRemove);
+
+            if (item.isEmpty()) inventory.removeStackFromSlot(stack);
+
+            inventory.setInventorySlotContents(stack, item);
+            amountBase -= amountToRemove;
+        }
+
+        if (amountBase != 0) throw new RuntimeException("AmountBase is not zero ! It is " + amountBase + " !");
+
+        return true;
+    }
+
     public static void markItemAsBought(ItemStack target) {
         CompoundNBT nbt = target.getTag();
         if (nbt == null) nbt = new CompoundNBT();
