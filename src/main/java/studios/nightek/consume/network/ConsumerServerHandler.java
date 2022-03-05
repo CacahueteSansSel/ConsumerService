@@ -16,6 +16,7 @@ import studios.nightek.consume.entities.BankAccountControllerBlockTileEntity;
 import studios.nightek.consume.entities.CashMachineTileEntity;
 import studios.nightek.consume.entities.PackagerTileEntity;
 import studios.nightek.consume.items.ReceiptItem;
+import studios.nightek.consume.marketing.MarketingUtilities;
 import studios.nightek.consume.network.packets.*;
 
 import java.util.function.Supplier;
@@ -201,30 +202,18 @@ public class ConsumerServerHandler {
                     return;
                 }
                 if (packet.intArg <= 0) return;
-                if (packet.intArg > 64) {
-                    ConsumerNetwork.channel.send(PacketDistributor.PLAYER.with(() -> sender), new ServerToClientPaymentResponsePacket(true, "You can't deposit more than 64 " + AccountManager.CURRENCY_NAME, -1, "ATM", "Unknown"));
-                    return;
-                }
+
                 Account w = te.getWallet();
                 if (!w.verified) return;
 
-                int deletedCount = 0;
-                for (int i = 0; i < sender.inventory.getSizeInventory(); i++) {
-                    ItemStack stack = sender.inventory.getStackInSlot(i);
-                    if (stack.getItem() != Items.EMERALD) continue;
-                    if (stack.getCount() - packet.intArg < 0) {
-                        continue;
-                    }
-                    stack.setCount(stack.getCount() - packet.intArg);
-                    deletedCount = packet.intArg;
+                boolean success = MarketingUtilities.consumeCurrency(sender.inventory, packet.intArg);
+                if (!success) {
+                    ConsumerNetwork.channel.send(PacketDistributor.PLAYER.with(() -> sender), new ServerToClientPaymentResponsePacket(true, "Not enough emeralds", packet.intArg, "ATM", w.getDisplayName()));
                     break;
                 }
-                if (deletedCount == 0) {
-                    ConsumerNetwork.channel.send(PacketDistributor.PLAYER.with(() -> sender), new ServerToClientPaymentResponsePacket(true, "Not enough emeralds", deletedCount, "ATM", w.getDisplayName()));
-                    break;
-                }
-                BankAccountControllerBlockTileEntity.TransactionResponse resp = te.beginVoidTransaction(deletedCount);
-                ConsumerNetwork.channel.send(PacketDistributor.PLAYER.with(() -> sender), new ServerToClientPaymentResponsePacket(resp, deletedCount, "ATM", w.getDisplayName()));
+
+                BankAccountControllerBlockTileEntity.TransactionResponse resp = te.beginVoidTransaction(packet.intArg);
+                ConsumerNetwork.channel.send(PacketDistributor.PLAYER.with(() -> sender), new ServerToClientPaymentResponsePacket(resp, packet.intArg, "ATM", w.getDisplayName()));
                 break;
             }
             case Withdraw:
