@@ -10,7 +10,7 @@ import net.minecraft.client.settings.GraphicsFanciness;
 import net.minecraft.util.math.vector.Quaternion;
 
 public class ProtectiveShelfTileEntityRenderer extends TileEntityRenderer<ProtectiveShelfTileEntity> {
-
+    public static final float ITEMS_SIZE = 0.75f;
     public ProtectiveShelfTileEntityRenderer(TileEntityRendererDispatcher dispatcher) {
         super(dispatcher);
     }
@@ -40,12 +40,17 @@ public class ProtectiveShelfTileEntityRenderer extends TileEntityRenderer<Protec
         matrixStackIn.scale(0.3f, 0.3f, 0.3f);
         matrixStackIn.translate(0.75f, 3.05f, -0.3f);
         matrixStackIn.rotate(new Quaternion(0, 90, 0, true));
+
         for (int y = 0; y < 3; y++) {
             for (int x = 0; x < 3; x++) {
                 matrixStackIn.translate(-1f, 0, 0);
+                matrixStackIn.scale(ITEMS_SIZE, ITEMS_SIZE, ITEMS_SIZE);
                 mc.getItemRenderer().renderItem(tileEntityIn.inv.getStackInSlot(y * 3 + x), ItemCameraTransforms.TransformType.FIXED, combinedLightIn, combinedOverlayIn, matrixStackIn, bufferIn);
+                matrixStackIn.scale(1 / ITEMS_SIZE, 1 / ITEMS_SIZE, 1 / ITEMS_SIZE);
                 matrixStackIn.translate(0, 0, 1.75f);
+                matrixStackIn.scale(ITEMS_SIZE, ITEMS_SIZE, ITEMS_SIZE);
                 mc.getItemRenderer().renderItem(tileEntityIn.inv.getStackInSlot(y * 3 + x), ItemCameraTransforms.TransformType.FIXED, combinedLightIn, combinedOverlayIn, matrixStackIn, bufferIn);
+                matrixStackIn.scale(1 / ITEMS_SIZE, 1 / ITEMS_SIZE, 1 / ITEMS_SIZE);
                 matrixStackIn.translate(0, 0, -1.75f);
             }
             matrixStackIn.translate(3f, -1f, 0);
