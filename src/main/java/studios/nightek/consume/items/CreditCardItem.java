@@ -25,12 +25,12 @@ public class CreditCardItem extends Item {
 
     public static String getCardWalletId(ItemStack stack) {
         CompoundNBT nbt = stack.getTag();
-        return nbt.contains("wallet_id") ? nbt.getString("wallet_id") : null;
+        return nbt.contains("wallet_id") ? nbt.getString("wallet_id").trim() : null;
     }
 
     public static String getCardDisplayName(ItemStack stack) {
         CompoundNBT nbt = stack.getTag();
-        return nbt.contains("wallet_name") ? nbt.getString("wallet_name") : null;
+        return nbt.contains("wallet_name") ? nbt.getString("wallet_name") : "Unnamed";
     }
 
     @Override
