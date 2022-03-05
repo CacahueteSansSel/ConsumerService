@@ -24,6 +24,7 @@ public class ConsumerItems {
     public static final Item ALCOHOL_BOTTLE = new AlcoholDrinkableItem("alcohol_bottle", AlcoholDrinkableItem.AlcoholStrength.High).withPrice(5);
     public static final Item WATER_BOTTLE = new DrinkableItem("water_bottle", 10, 4).withPrice(1);
     public static final Item ORANGE_JUICE_BOTTLE = new DrinkableItem("orange_juice_bottle", 0, 8).withPrice(3);
+    public static final Item CREEPER_ENERGY_DRINK = new DrinkableItem("creeper_energy_drink", 2, 9).withPrice(5);
     public static final ContainerFoodItemCouple FOOD_CHOCOLATE_BAR = new ContainerFoodItemCouple("chocolate_bar", 5, 1, 5, 2);
     public static final ContainerFoodItemCouple FOOD_PURPLODOCUS = new ContainerFoodItemCouple("purplodocus", 7, 0, 5, 4);
     public static final ContainerFoodItemCouple FOOD_STRAWBERRY_YOGURT = new ContainerFoodItemCouple("strawberry_yogurt", 3, 1, 20, 2);
@@ -83,6 +84,7 @@ public class ConsumerItems {
                 LUMINESCENT_SPIRIT_BOTTLE,
                 WATER_BOTTLE,
                 SODA_BOTTLE,
+                CREEPER_ENERGY_DRINK,
                 HUNGER_GUM,
                 EMPTY_POT,
                 HONEY_POT,
