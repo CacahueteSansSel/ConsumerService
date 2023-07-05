@@ -1,0 +1,33 @@
+package dev.cacahuete.consume.items;
+
+import dev.cacahuete.consume.marketing.MarketingUtilities;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+
+public class CommerceBlockItem extends BlockItem {
+
+    public int emeraldCount;
+    public CommerceBlockItem(Block block, Properties properties) {
+        super(block, properties);
+        emeraldCount = 1;
+    }
+
+    public CommerceBlockItem withPrice(int priceEmerald) {
+        emeraldCount = priceEmerald;
+        return this;
+    }
+
+    public int getPrice() {
+        return emeraldCount;
+    }
+
+    @Override
+    public void fillItemGroup(ItemGroup group, NonNullList<ItemStack> items) {
+        if (this.isInGroup(group)) {
+            items.add(MarketingUtilities.setItemPrice(new ItemStack(this), getPrice()));
+        }
+    }
+}

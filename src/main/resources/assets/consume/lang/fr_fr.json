@@ -1,6 +1,5 @@
 {
   "itemGroup.consume.main": "Consumer Service",
-  "itemGroup.consume.wrappers": "Emballages",
   "block.consume.protective_block": "Mur protégé",
   "block.consume.protective_tile": "Carrelage protégé",
   "block.consume.protective_ceiling_red": "Plafond protégé rouge",
@@ -137,5 +136,5 @@
   "item.consume.empty_wrapper": "Emballage vide",
   "ui.crypto.codechanged": "Le code a bien été changé",
   "ui.crypto.codechangederror": "Le code n'a pas été changé suite à une erreur",
-  "ui.consume.receipt.title": "Reçu des opérations"
+  "ui.consume.receipt.title": "Reçu"
 }
